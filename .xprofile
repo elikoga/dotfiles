@@ -1,0 +1,11 @@
+#!/bin/sh
+setbg &
+ibus-daemon -drx &
+sxhkd &
+compton &
+unclutter &
+dunst &
+mpdupdate &
+blueman-applet &
+remaps &
+setres &
