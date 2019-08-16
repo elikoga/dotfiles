@@ -49,18 +49,6 @@ gaps outer 0
 set $term --no-startup-id $TERMINAL
 set $mod Mod4
 
-# #---Dropdown Windows---# #
-# General dropdown window traits. The order can matter.
-for_window [instance="dropdown_*"] floating enable
-for_window [instance="dropdown_*"] move scratchpad
-for_window [instance="dropdown_*"] sticky enable
-for_window [instance="dropdown_*"] scratchpad show
-for_window [instance="dropdown_tmuxdd"] resize set 625 450
-for_window [instance="dropdown_dropdowncalc"] resize set 800 300
-for_window [instance="dropdown_tmuxdd"] border pixel 3
-for_window [instance="dropdown_dropdowncalc"] border pixel 2
-for_window [instance="dropdown_*"] move position center
-
 bar {
 	font pango:mono 8
 	status_command i3blocks
@@ -81,8 +69,8 @@ bindsym $mod+Shift+Escape 	exec --no-startup-id prompt "Exit i3?" "i3-msg exit"
 bindsym $mod+Shift+Delete	exec --no-startup-id lmc truemute ; exec --no-startup-id lmc pause ; exec --no-startup-id pauseallmpv; workspace 0; exec $term -e htop ; exec $term -e $FILE
 
 # #---Letter Key Bindings---# #
-bindsym $mod+q			[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
-bindsym $mod+Shift+q		[con_id="__focused__" instance="^(?!dropdown_).*$"] exec --no-startup-id kill -9 `xdotool getwindowfocus getwindowpid`
+bindsym $mod+q			kill
+bindsym $mod+Shift+q		exec --no-startup-id kill -9 `xdotool getwindowfocus getwindowpid`
 
 bindsym $mod+Shift+r		exec --no-startup-id winresize
 
@@ -91,7 +79,6 @@ bindsym $mod+Shift+t		gaps inner current set 5; gaps outer current set 0
 
 bindsym $mod+Shift+y		exec --no-startup-id i3resize left
 
-bindsym $mod+u			exec --no-startup-id ddspawn tmuxdd
 bindsym $mod+Shift+u		exec --no-startup-id i3resize down
 
 bindsym $mod+Shift+i		exec --no-startup-id i3resize up
@@ -99,15 +86,14 @@ bindsym $mod+Shift+i		exec --no-startup-id i3resize up
 bindsym $mod+o			sticky toggle
 bindsym $mod+Shift+o		exec --no-startup-id i3resize right
 
-bindsym $mod+a			exec --no-startup-id ddspawn dropdowncalc -f mono:pixelsize=24
-
 bindsym $mod+s			gaps inner current plus 5
 bindsym $mod+Shift+s		gaps inner current minus 5
 
 bindsym $mod+Shift+d		gaps inner current set 0; gaps outer current set 0
 
 set $freeze Distraction-free mode (super+shift+f to reactivate bindings)
-mode "$freeze" { bindsym $mod+Shift+f mode "default"
+mode "$freeze" {
+    bindsym $mod+Shift+f mode "default"
 }
 
 bindsym $mod+f			fullscreen toggle
@@ -132,15 +118,8 @@ bindsym $mod+Shift+z		gaps outer current minus 5
 
 
 bindsym $mod+b			bar mode toggle
-bindsym $mod+Shift+b		floating toggle; sticky toggle; exec --no-startup-id hover left
-
-bindsym $mod+Shift+n		floating toggle; sticky toggle; exec --no-startup-id hover right
 
 # #---Workspace Bindings---# #
-bindsym $mod+Home		workspace $ws1
-bindsym $mod+Shift+Home		move container to workspace $ws1
-bindsym $mod+End		workspace $ws10
-bindsym $mod+Shift+End		move container to workspace $ws10
 bindsym $mod+Prior		workspace prev
 bindsym $mod+Shift+Prior	move container to workspace prev
 bindsym $mod+Next		workspace next
@@ -189,7 +168,6 @@ bindsym $mod+Shift+9	move container to workspace $ws9
 bindsym $mod+Shift+0	move container to workspace $ws10
 
 for_window [class="Pinentry"] sticky enable
-for_window [class="sent"] border pixel 0px
 for_window [window_role="GtkFileChooserDialog"] resize set 800 600
 for_window [window_role="GtkFileChooserDialog"] move position center
 for_window [title="Default - Wine desktop"] floating enable
