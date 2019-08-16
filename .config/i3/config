@@ -50,7 +50,7 @@ set $term --no-startup-id $TERMINAL
 set $mod Mod4
 
 bar {
-	font pango:mono 8
+	font pango:mono 10
 	status_command i3blocks
 	position top
 	mode dock
