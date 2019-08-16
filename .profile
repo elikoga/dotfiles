@@ -1,6 +1,5 @@
-#
-# ~/.profile
-#
+#!/bin/sh
+# Profile file; Runs on login.
 
 export PATH="$PATH:$(find $HOME/.local/bin -type d | tr '\n' ':' | sed "s/:*$//")"
 export EDITOR="nvim"
@@ -8,10 +7,6 @@ export TERMINAL="kitty"
 export BROWSER="firefox"
 export READER="zathura"
 export FILE="vu"
-export SUDO_ASKPASS="$HOME/.local/bin/tools/dmenupass"
-
-
-export location="paderborn"
 
 # less/man colors
 export LESS=-R
@@ -23,12 +18,17 @@ export LESS_TERMCAP_se="$(printf '%b' '[0m')"; a="${a%_}"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"; a="${a%_}"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"; a="${a%_}"
 
-mpd >/dev/null 2>&1 &
+# Start mpd if not already running
+[ ! -s ~/.config/mpd/pid ] && mpd
 
-eval $(ssh-agent)
-
+# If shortcuts dont exist, create them
 [ ! -f ~/.config/shortcutrc ] && shortcuts >/dev/null 2>&1
 
+# Start the ssh-agent
+eval $(ssh-agent)
+
+# Source .bashrc if bash is the current shell
 echo "$0" | grep "bash$" >/dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashrc"
 
-sudo -n loadkeys ~/.local/bin/ttymaps.kmap 2>/dev/null
+# Switch escape and caps
+loadkeys ~/.local/bin/ttymaps.kmap 2>/dev/null
