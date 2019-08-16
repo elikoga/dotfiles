@@ -54,13 +54,7 @@
 ##      home, end, space, enter, insert, delete, left, right,
 ##      tab, ctrl-a, ctrl-b, ..., ctrl-z, ctrl-[, ctrl-\\,
 ##      ctrl-], ctrl-^, ctrl-_, f1, f2, ..., f12, backspace.
-##      In addition, most of these names can be prefixed with
-##      alt-/ctrl-/shift- to be recognized with the appropriate
-##      modifier key(s).
-##
-##    - push_characters "string" - pushes given string into
-##      input queue.
-##
+##      In addition, most of these names can be prefixed with #      alt-/ctrl-/shift- to be recognized with the appropriate #      modifier key(s).  # #    - push_characters "string" - pushes given string into #      input queue.  #
 ##    - require_runnable "action" - checks whether given action
 ##      is runnable and fails if it isn't. This is especially
 ##      useful when mixed with previous two functions. Consider
