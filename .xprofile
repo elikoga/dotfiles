@@ -1,6 +1,7 @@
 #!/bin/sh
 setbg &
 ibus-daemon -drx &
+pcmanfm -d &
 sxhkd &
 compton &
 unclutter &
