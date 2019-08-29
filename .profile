@@ -18,6 +18,9 @@ export LESS_TERMCAP_se="$(printf '%b' '[0m')"; a="${a%_}"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"; a="${a%_}"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"; a="${a%_}"
 
+# Jupyter Paths
+export JUPYTERLAB_DIR=$HOME/.local/share/jupyter/lab
+
 # Start mpd if not already running
 [ ! -s ~/.config/mpd/pid ] && mpd
 
