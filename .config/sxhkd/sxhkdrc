@@ -18,6 +18,36 @@ super + shift + x
 super + shift + BackSpace
 	prompt "Reboot computer?" "sudo -A shutdown -h now"
 
+# Laptop stuff
+XF86Launch1
+	xset dpms force off
+XF86AudioMute
+	lmc mute
+XF86AudioLowerVolume
+	lmc down 5
+shift+XF86AudioLowerVolume
+	lmc down 10
+control+XF86AudioLowerVolume
+	lmc down 1
+XF86AudioRaiseVolume
+	lmc up 5
+shift+XF86AudioRaiseVolume
+	lmc up 10
+control+XF86AudioRaiseVolume
+	lmc up 1
+XF86MonBrightnessDown
+	xbacklight -dec 10
+shift+XF86MonBrightnessDown
+	xbacklight -dec 25
+control+XF86MonBrightnessDown
+	xbacklight -dec 1
+XF86MonBrightnessUp
+	xbacklight -inc 10
+shift+XF86MonBrightnessUp
+	xbacklight -inc 25
+control+XF86MonBrightnessUp
+	xbacklight -inc 1
+
 # Recording
 # Take screenshot
 Print
