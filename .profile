@@ -22,7 +22,7 @@ export LESS_TERMCAP_ue="$(printf '%b' '[0m')"; a="${a%_}"
 export JUPYTERLAB_DIR=$HOME/.local/share/jupyter/lab
 
 # Start mpd if not already running
-[ ! -s ~/.config/mpd/pid ] && mpd
+pgrep -u $USER mpd >/dev/null 2>&1 || mpd
 
 # If shortcuts dont exist, create them
 [ ! -f ~/.config/shortcutrc ] && shortcuts >/dev/null 2>&1
