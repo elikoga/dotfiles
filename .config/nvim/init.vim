@@ -18,6 +18,15 @@ Plug 'vim-airline/vim-airline' "For a statusline
 Plug 'vim-airline/vim-airline-themes' "For themes (airline)
 Plug 'jeffkreeftmeijer/vim-numbertoggle' "For Numbers that make sense
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'deoplete-plugins/deoplete-jedi' "Python completion
+
 function! BuildComposer(info)
   if a:info.status != 'unchanged' || a:info.force
     if has('nvim')
@@ -83,6 +92,13 @@ let g:vifm_replace_netrw=1
 
 " Theming
 let g:airline_theme='wal'
+
+
+" deoplete fuckery
+let g:deoplete#enable_at_startup = 1
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif " Close window on autocomplete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" Navigate with tab
 
 
 " Please replace in future
