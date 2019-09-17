@@ -1,3 +1,7 @@
+# Macros:
+XF86Launch8
+        xdotool click --repeat 500 --delay 0 3
+
 # Basic binds
 super + Return
 	$TERMINAL
