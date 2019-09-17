@@ -9,7 +9,7 @@ markup=pango
 
 [music]
 label=🎼
-interval=1
+interval=once
 signal=11
 
 #[news]
@@ -20,31 +20,31 @@ signal=11
 #[iplocate]
 #interval=30
 
-[pacpackages]
-label=📦
-interval=once
-signal=8
+#[pacpackages]
+#label=📦
+#interval=once
+#signal=8
 
-[torrent]
-interval=20
-signal=7
+#[torrent]
+#interval=20
+#signal=7
 
-[weather]
-interval=18000
-signal=5
+#[weather]
+#interval=18000
+#signal=5
 
-[mailbox]
-label=📬
-interval=180
-signal=12
+#[mailbox]
+#label=📬
+#interval=180
+#signal=12
 
-#[memory]
-#interval=30
-#label=🧠
+[memory]
+interval=30
+label=🧠
 
-#[cpu]
-#interval=15
-#label=💻
+[cpu]
+interval=15
+label=💻
 
 [volume]
 interval=once
@@ -54,9 +54,9 @@ signal=10
 interval=60
 command=disk /
 
-[disk]
-interval=60
-command=disk /home 🏠
+#[disk]
+#interval=60
+#command=disk /home 🏠
 
 [battery]
 command=battery BAT0
