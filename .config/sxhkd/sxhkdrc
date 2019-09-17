@@ -47,6 +47,11 @@ shift+XF86MonBrightnessUp
 	xbacklight -inc 25
 control+XF86MonBrightnessUp
 	xbacklight -inc 1
+XF86ScreenSaver
+        i3lock -B=2 -k --timecolor=ffffffff --datecolor=ffffffff --{time,date,layout,verif,wrong}-font=monospace
+shift+XF86ScreenSaver
+        i3lock -B=2 -k --timecolor=ffffffff --datecolor=ffffffff --{time,date,layout,verif,wrong}-font=monospace && xset dpms force off
+
 
 # Recording
 # Take screenshot
