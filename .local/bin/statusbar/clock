@@ -1,7 +1,6 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
-date '+%Y %b %d (%a) %I:%M%p'
-
+date '+%Y-%m-%d %a:%b %R'
 case $BLOCK_BUTTON in
 	1) pgrep -x dunst >/dev/null && notify-send "This Month" "$(cal --color=always | sed "s/..7m/<b><span color=\"red\">/;s/..27m/<\/span><\/b>/")" && notify-send "Appointments" "$(calcurse -D ~/.config/calcurse -d3)" ;;
 	2) $TERMINAL -e calcurse -D ~/.config/calcurse ;;
