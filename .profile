@@ -1,7 +1,7 @@
 #!/bin/sh
 # Profile file; Runs on login.
 
-export PATH="$PATH:$(find $HOME/.local/bin -type d | tr '\n' ':' | sed "s/:*$//")"
+export PATH="$(find $HOME/.local/bin -type d | tr '\n' ':' | sed "s/:*$//"):$PATH"
 export EDITOR="nvim"
 export TERMINAL="kitty"
 export BROWSER="firefox"
