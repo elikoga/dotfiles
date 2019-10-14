@@ -41,7 +41,7 @@ Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
 call plug#end()
 
-let g:markdown_composer_external_renderer='pandoc -f markdown -t html'
+let g:markdown_composer_autostart=0
 
 
 " Simple definitions
