@@ -7,7 +7,7 @@ export EDITOR="nvim"
 export TERMINAL="kitty"
 export BROWSER="firefox"
 export READER="zathura"
-export FILE="vu"
+export FILE="ranger"
 
 # less/man colors
 export LESS=-R
