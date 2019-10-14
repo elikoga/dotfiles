@@ -6,7 +6,7 @@ XF86Launch8
 super + Return
 	$TERMINAL
 super + d
-	dmenu_run
+	rofi -show run
 super + r
 	$TERMINAL -e $FILE
 super + m
