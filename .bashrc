@@ -13,4 +13,7 @@ export GLFW_IM_MODULE=ibus
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc" # Load shortcut aliases
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
-neofetch
+export PF_INFO="ascii title os host kernel uptime pkgs memory shell editor wm de palette"
+
+pfetch
+
