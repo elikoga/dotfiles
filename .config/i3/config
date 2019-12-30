@@ -100,10 +100,8 @@ bindsym $mod+f			fullscreen toggle
 bindsym $mod+Shift+f		mode "$freeze" ;; exec --no-startup-id notify-send "Distraction-free mode activated." "Press Super+Shift+f to return."
 
 bindsym $mod+g			workspace prev
-
 bindsym $mod+h			focus left
 bindsym $mod+Shift+h		move left 30
-
 bindsym $mod+j			focus down
 bindsym $mod+Shift+j		move down 30
 
@@ -128,9 +126,7 @@ bindsym $mod+Tab		workspace back_and_forth
 bindsym $mod+semicolon		workspace next
 bindsym $mod+apostrophe		split horizontal ;; exec $term
 bindsym $mod+slash		split vertical ;; exec $term
-bindsym $mod+Shift+slash	kill
-bindsym $mod+backslash		workspace back_and_forth
-
+bindsym $mod+Shift+slash	kill bindsym $mod+backslash		workspace back_and_forth
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -202,3 +198,5 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 bindsym $mod+x mode "$mode_system"
+
+floating_modifier $mod
