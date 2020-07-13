@@ -2,7 +2,6 @@
 # Profile file; Runs on login.
 
 export PATH="$(find $HOME/.local/bin -type d | tr '\n' ':' | sed "s/:*$//"):$PATH"
-export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 export EDITOR="nvim"
 export TERMINAL="kitty"
 export BROWSER="firefox"
