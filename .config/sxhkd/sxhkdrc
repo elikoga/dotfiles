@@ -52,9 +52,9 @@ shift+XF86MonBrightnessUp
 control+XF86MonBrightnessUp
 	xbacklight -inc 1
 XF86ScreenSaver
-        i3lock -B=2 -k --timecolor=ffffffff --datecolor=ffffffff --{time,date,layout,verif,wrong}-font=monospace
+        loginctl lock-session
 shift+XF86ScreenSaver
-        i3lock -B=2 -k --timecolor=ffffffff --datecolor=ffffffff --{time,date,layout,verif,wrong}-font=monospace && xset dpms force off
+        loginctl lock-session
 
 
 # Recording
