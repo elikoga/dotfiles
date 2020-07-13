@@ -11,7 +11,7 @@ Plug 'junegunn/vim-plug'
 Plug 'mboughaba/i3config.vim'
 Plug 'junegunn/goyo.vim' "Call :Goyo
 Plug 'jreybert/vimagit' "Call :M
-Plug 'vifm/vifm.vim' "Call :Vifm
+" Plug 'vifm/vifm.vim' "Call :Vifm
 Plug 'LukeSmithxyz/vimling' "For deadkeys
 Plug 'dylanaraps/wal.vim' " For airline colors
 Plug 'vim-airline/vim-airline' "For a statusline
@@ -88,7 +88,7 @@ map <C-l> <C-w>l
 set splitbelow splitright
 
 " netrw replacing
-let g:vifm_replace_netrw=1
+" let g:vifm_replace_netrw=1
 
 " Theming
 let g:airline_theme='wal'
