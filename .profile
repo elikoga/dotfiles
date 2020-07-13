@@ -27,9 +27,6 @@ pgrep -u $USER mpd >/dev/null 2>&1 || mpd
 # If shortcuts dont exist, create them
 [ ! -f ~/.config/shortcutrc ] && shortcuts >/dev/null 2>&1
 
-# Start the ssh-agent
-eval $(ssh-agent)
-
 # Source .bashrc if bash is the current shell
 echo "$0" | grep "bash$" >/dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashrc"
 
