@@ -10,5 +10,6 @@ mpdupdate &
 blueman-applet &
 openrazer-daemon &
 lxqt-policykit-agent &
+light-locker &
 remaps
 setres
