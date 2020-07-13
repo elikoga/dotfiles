@@ -103,7 +103,7 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " Please replace in future
 
-"voidrice legacy
+" voidrice legacy
 " When shortcut files are updated, renew bash and vifm configs with new material:
 autocmd BufWritePost ~/.config/bmdirs,~/.config/bmfiles !shortcuts
 
