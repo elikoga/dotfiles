@@ -1,5 +1,6 @@
 #!/bin/bash
 shopt -s autocd
+stty -ixon      # Disables freezing from Ctrl-S
 
 COLOR0="\[$(tput setaf 0)\]"
 COLOR1="\[$(tput setaf 1)\]"
