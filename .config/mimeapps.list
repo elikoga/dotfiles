@@ -1,0 +1,18 @@
+[Removed Associations]
+image/gif=userapp-feh-CC1TK0.desktop;
+
+[Added Associations]
+application/pdf=userapp-zathura-XIAAD0.desktop;
+video/mp4=userapp-mpv-OCVPE0.desktop;
+image/png=userapp-sxiv-UYSGG0.desktop;
+application/xml=nvim.desktop;
+inode/directory=pcmanfm.desktop;
+text/plain=nvim.desktop;
+x-scheme-handler/magnet=userapp-transmission-gtk-PMTFK0.desktop;
+image/gif=userapp-tor-browser-PUYXK0.desktop;
+
+[Default Applications]
+image/png=userapp-sxiv-UYSGG0.desktop
+inode/directory=pcmanfm.desktop;
+x-scheme-handler/magnet=userapp-transmission-gtk-PMTFK0.desktop
+text/html=firefox.desktop
