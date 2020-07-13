@@ -11,5 +11,6 @@ blueman-applet &
 openrazer-daemon &
 lxqt-policykit-agent &
 light-locker &
+nm-applet &
 remaps
 setres
