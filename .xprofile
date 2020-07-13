@@ -1,4 +1,5 @@
 #!/bin/sh
+source .profile
 setbg &
 ibus-daemon -drx &
 pcmanfm -d &
